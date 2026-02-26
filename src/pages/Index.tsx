@@ -59,8 +59,8 @@ const Index = () => {
             className="absolute bg-cover bg-right lg:bg-center"
           />
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-linear-to-r from-black/90 to-black/50" />
+        {/* Overlay (only on desktop) */}
+        <div className="absolute inset-0 bg-linear-to-r from-black/90 to-black/50 hidden lg:block" />
         {/* Content */}
         <div className="container-wide mx-auto px-4 sm:px-6 py-20 lg:py-32 relative z-10">
             <div className="flex lg:grid-cols-2 gap-12 lg:gap-20 items-center">
