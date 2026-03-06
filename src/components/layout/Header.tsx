@@ -158,6 +158,22 @@ const Header = () => {
 
               {/* Mascot */}
 
+              {/* Mobile GPS platform button */}
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: 20, opacity: 0 }}
+                transition={{ delay: 0.1 }}
+              >
+                <Button variant="outline" size="sm" asChild>
+                  <a href="http://flotamtc.com:8080/premium/Track?page=login" target="_blank" rel="noopener noreferrer">
+                    <MapPin className="w-4 h-4" />
+                    Plataforma GPS
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </Button>
+              </motion.div>
+
               {/* Nav Items */}
               {navItems.map((item, index) => (
                 <motion.div

@@ -13,7 +13,6 @@ import {
   Settings
 } from "lucide-react";
 import FloatingShapes from "../components/decorators/FloatingShapes";
-import banner_comunsat from "../assets/banner.webp";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -52,15 +51,16 @@ const Index = () => {
       {/* Hero Section */}
         <section className="relative w-full aspect-1355/602 lg:h-[90vh] flex items-center overflow-hidden">
         
-        {/* Background Image */}
-          <img
-            src={banner_comunsat}
-            alt="Rastreo satelital Comunsat"
-            className="absolute bg-cover bg-right lg:bg-center"
+        {/* Background video */}
+          <video
+            src="/video_comunsat.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute w-full h-full object-cover bg-cover bg-right lg:bg-center"
           />
 
-        {/* Overlay (only on desktop) */}
-        <div className="absolute inset-0 bg-linear-to-r from-black/90 to-black/50 hidden lg:block" />
         {/* Content */}
         <div className="container-wide mx-auto px-4 sm:px-6 py-20 lg:py-32 relative z-10">
             <div className="flex lg:grid-cols-2 gap-12 lg:gap-20 items-center">
