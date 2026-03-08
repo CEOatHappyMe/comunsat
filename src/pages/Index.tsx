@@ -53,14 +53,16 @@ const Index = () => {
         
         {/* Background video */}
           <video
-            src="/video_comunsat.mp4"
             autoPlay
             muted
             loop
             playsInline
-            className="absolute w-full h-full object-cover bg-cover bg-right lg:bg-center"
-          />
-
+            preload="auto"
+            className="absolute w-full h-full object-cover"
+          >
+            <source src="/video_comunsat.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-black/40 z-0"></div>
         {/* Content */}
         <div className="container-wide mx-auto px-4 sm:px-6 py-20 lg:py-32 relative z-10">
             <div className="flex lg:grid-cols-2 gap-12 lg:gap-20 items-center">
