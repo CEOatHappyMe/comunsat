@@ -58,11 +58,11 @@ const Index = () => {
             loop
             playsInline
             preload="auto"
-            className="absolute inset-0 w-full h-full object-cover -z-10"
+            className="absolute w-full h-full object-cover"
           >
-            <source src="/video_comunsat.mp4" type="video/mp4" />
+            <source src="/video_comunsat.webm" type="video/webm" />
           </video>
-          <div className="absolute inset-0 bg-black/40 z-0"></div>
+
         {/* Content */}
         <div className="container-wide mx-auto px-4 sm:px-6 py-20 lg:py-32 relative z-10">
             <div className="flex lg:grid-cols-2 gap-12 lg:gap-20 items-center">
