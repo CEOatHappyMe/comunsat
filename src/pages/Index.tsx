@@ -58,7 +58,7 @@ const Index = () => {
             loop
             playsInline
             preload="auto"
-            className="absolute w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover -z-10"
           >
             <source src="/video_comunsat.mp4" type="video/mp4" />
           </video>
