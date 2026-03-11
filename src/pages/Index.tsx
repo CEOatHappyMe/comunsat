@@ -13,6 +13,7 @@ import {
   Settings
 } from "lucide-react";
 import FloatingShapes from "../components/decorators/FloatingShapes";
+import comunsat_logo from "../assets/comunsat_logo.webp"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -316,6 +317,81 @@ const Index = () => {
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Mobile App Section */}
+      <section id="mobile-app"
+        className="py-14 bg-linear-to-br from-[#FFFF] via-[#879abe] to-[#0B2C6B]">        
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-10 lg:gap-12 items-center">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="inline-block px-4 py-2 rounded-full bg-[#F97A1F]/10 text-[#F97A1F] text-sm font-medium mb-4">
+                APP MÓVIL
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-5xl font-display font-bold text-[#0B2C6B] mb-6">
+                Gestiona tu flota desde cualquier lugar
+              </h2>
+              <p className="text-lg text-[#000000] mb-8 leading-relaxed">
+                Descarga nuestra aplicación móvil y monitorea tus vehículos en tiempo real desde tu celular. Acceso instantáneo a todas las funciones de rastreo GPS, alertas y reportes.
+              </p>
+
+              {/* Google Play Button */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.comunsat.gps"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-3
+                            px-8 py-4 text-lg font-semibold
+                            rounded-xl bg-[#0B2C6B] text-white
+                            hover:bg-[#F97A1F]/90 hover:shadow-lg hover:shadow-[#0B2C6B]/30
+                            transition-all duration-300"
+                >
+                  Descargar en Google Play
+                  <ExternalLink className="w-5 h-5" />
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Right Phone Mockup */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex justify-center items-center"
+            >
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                className="relative"
+              >
+                {/* Phone Shadow */}
+                <div className="absolute inset-0 rounded-[40px] bg-linear-to-b from-[#0B2C6B]/20 to-[#0B2C6B]/5 blur-2xl -z-10 w-full h-full" />
+
+                {/* Phone Frame */}
+                <div className="relative bg-[#1C1C1C] rounded-[40px] p-3 shadow-2xl" style={{ maxWidth: "240px" }}>
+                  {/* Phone Details */}
+                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-7 bg-[#1C1C1C] rounded-b-3xl z-10" />
+
+                  {/* Screen */}
+                  <div className="rounded-[34px] overflow-hidden bg-white">
+                    <img
+                      src={comunsat_logo} alt="ComunSat Logo"
+                      className="w-full h-auto max-h-105 object-cover"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
     </div>
